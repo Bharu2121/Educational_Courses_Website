@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educational Course Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/11422/11422050.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+      <div class="logo_head">
+          <img
+              src="https://cdn-icons-png.flaticon.com/128/17694/17694492.png"
+              alt="logo"
+              class="logo"
+          />
+          <h1>Bharathi Tech</h1>
+      </div>
+      <nav>
+          
+          <ul class="nav-links">
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#signup">Sign Up</a></li>
+              <li><a href="#faq">FAQ</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </nav>
+  </header>
+    <main>
+      <section id="courses">
+        <h1>Trending Courses</h1>
+        <div class="course-container">
+          <div class="course" data-course-id="1">
+              <i class="fas fa-laptop-code"></i>
+              <h3>Web Development</h3>
+              <p>Build websites with HTML, CSS, and JavaScript.</p>
+              <div class="price">
+                  <span class="original-price">$299</span>
+                  <span class="discount-price">$199</span>
+                  <span class="discount-percentage">(33% off)</span>
+              </div>
+              <button class="enroll-btn" onclick="openForm(this)">Enroll Now</button>
+          </div>
+  
+          <div class="course" data-course-id="2">
+              <i class="fas fa-chart-line"></i>
+              <h3>Data Science</h3>
+              <p>Master data analysis and machine learning basics.</p>
+              <div class="price">
+                  <span class="original-price">$399</span>
+                  <span class="discount-price">$299</span>
+                  <span class="discount-percentage">(25% off)</span>
+              </div>
+              <button class="enroll-btn" onclick="openForm(this)">Enroll Now</button>
+          </div>
+  
+          <div class="course" data-course-id="3">
+              <i class="fab fa-java"></i>
+              <h3>Java Full Stack</h3>
+              <p>Become a Java full-stack developer with Spring.</p>
+              <div class="price">
+                  <span class="original-price">$350</span>
+                  <span class="discount-price">$249</span>
+                  <span class="discount-percentage">(29% off)</span>
+              </div>
+              <button class="enroll-btn" onclick="openForm(this)">Enroll Now</button>
+          </div>
+  
+          <div class="course" data-course-id="4">
+              <i class="fab fa-python"></i>
+              <h3>Python Full Stack</h3>
+              <p>Learn full-stack development with Django and Flask.</p>
+              <div class="price">
+                  <span class="original-price">$320</span>
+                  <span class="discount-price">$239</span>
+                  <span class="discount-percentage">(25% off)</span>
+              </div>
+              <button class="enroll-btn" onclick="openForm(this)">Enroll Now</button>
+          </div>
+  
+          <div class="course" data-course-id="5">
+              <i class="fas fa-user-tie"></i>
+              <h3>Salesforce Dev</h3>
+              <p>Build and manage Salesforce applications.</p>
+              <div class="price">
+                  <span class="original-price">$450</span>
+                  <span class="discount-price">$349</span>
+                  <span class="discount-percentage">(22% off)</span>
+              </div>
+              <button class="enroll-btn" onclick="openForm(this)">Enroll Now</button>
+          </div>
+  
+          <div class="course" data-course-id="6">
+              <i class="fas fa-tools"></i>
+              <h3>DevOps</h3>
+              <p>Learn CI/CD, automation, and containerization.</p>
+              <div class="price">
+                  <span class="original-price">$370</span>
+                  <span class="discount-price">$289</span>
+                  <span class="discount-percentage">(22% off)</span>
+              </div>
+              <button class="enroll-btn" onclick="openForm(this)">Enroll Now</button>
+          </div>
+  
+          <div class="course" data-course-id="7">
+              <i class="fas fa-magic"></i>
+              <h3>Prompt Engineering</h3>
+              <p>Create effective prompts for AI and NLP models.</p>
+              <div class="price">
+                  <span class="original-price">$300</span>
+                  <span class="discount-price">$225</span>
+                  <span class="discount-percentage">(25% off)</span>
+              </div>
+              <button class="enroll-btn" onclick="openForm(this)">Enroll Now</button>
+          </div>
+  
+          <div class="course" data-course-id="8">
+              <i class="fas fa-brain"></i>
+              <h3>Generative AI</h3>
+              <p>Build AI applications for text, image, and video generation.</p>
+              <div class="price">
+                  <span class="original-price">$400</span>
+                  <span class="discount-price">$299</span>
+                  <span class="discount-percentage">(25% off)</span>
+              </div>
+              <button class="enroll-btn" onclick="openForm(this)">Enroll Now</button>
+          </div>
+      </div>
+      
+      <div class="enroll-form-modal" id="enrollForm">
+        <div class="form-content">
+            <span class="close" onclick="closeForm()">x</span>
+            <h2>Enroll in Course</h2>
+            <form class="enroll" onsubmit="enrollCourse(event)">
+                <div id="success-message" style="display: none; color: green; margin-bottom: 1rem;">
+                    Enrollment successful! The course is now available for you.
+                </div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="payment">Payment Details:</label>
+                <input type="text" id="payment" placeholder="Card Number" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    </section>
+
+      <section id="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="feedback">
+          <div class="testimonial">
+            <p>“This course changed my career path! Highly recommended!” - <strong>Jhansi N.</strong></p>
+          </div>
+          <div class="testimonial">
+            <p>“I learned so much in just a few weeks. Great instructors!” - <strong>Srilaxmi B.</strong></p>
+          </div>
+          <div class="testimonial">
+            <p>“Amazing resources and support from the mentors. Couldn’t have asked for better guidance!” - <strong>Raju N.</strong></p>
+          </div>
+          <div class="testimonial">
+            <p>“A perfect blend of theory and hands-on practice. I feel job-ready.” - <strong>Naveen D.</strong></p>
+          </div>
+        </div>
+      </section>
+      
+
+      <section id="signup">
+        <h1>Sign Up for a Course</h1>
+        <form class="signupform" id="signupForm" onsubmit="return goToPaymentPage()">
+            <label for="name">Name:</label>
+            <input type="text" id="name_signup" required />
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email_signup" required />
+    
+            <label for="course">Select Course:</label>
+            <select id="course" required>
+                <option value="web-development">Web Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="java-full-stack">Java Full Stack</option>
+                <option value="python-full-stack">Python Full Stack</option>
+                <option value="salesforce-development">Salesforce Development</option>
+                <option value="devops">DevOps</option>
+                <option value="generative-ai">Generative AI</option>
+                <option value="prompt-engineering">Prompt Engineering</option>
+            </select>
+    
+            <button type="submit" class="signup_btn">Sign Up</button>
+        </form>
+    </section>
+    
+   
+    <section id="payment_signup" style="display: none;">
+        <h2></h2>
+        <form class="signupform"  id="paymentForm" onsubmit="return processPayment()">
+            <label for="payment">Payment Details:</label>
+            <input type="text" id="payment_card" placeholder="Card Number" required />
+    
+            <button type="submit" class="payment_btn">Complete Payment</button>
+        </form>
+    </section>
+    
+   
+    <div id="formMessage" class="success-card" style="display: none;"></div>
+    
+
+      <section id="faq">
+        <h1>Frequently Asked Questions</h1>
+        <div class="questions">
+            <div class="question">
+                <h3><i class="fas fa-clock"></i> What is the duration of the courses?</h3>
+                <p>Each course lasts approximately 6 weeks.</p>
+            </div>
+            <div class="question">
+                <h3><i class="fas fa-question-circle"></i> Are there any prerequisites?</h3>
+                <p>Basic computer skills are recommended, but no prior knowledge is required.</p>
+            </div>
+            <div class="question">
+                <h3><i class="fas fa-book"></i> What materials are provided?</h3>
+                <p>All necessary materials, including lecture notes and exercises, will be provided online.</p>
+            </div>
+            <div class="question">
+                <h3><i class="fas fa-user-graduate"></i> Is there a certificate of completion?</h3>
+                <p>Yes, a certificate will be issued upon successful completion of the course.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Online Courses. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
